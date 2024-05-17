@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelaria cardápio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="styles/output.css">
+    <script src="js/script.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+</head>
+
+<body>
+
+    <header class="w-full h-[420px] bg-zinc-800 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+
+            <img src="assets/pastel_logo.png" alt="Logo Pastelaria"
+                class="w-36 h-36 rounded-full shadow-lg hover:scale-110 duration-200">
+
+            <h1 class="text-3xl mt-4 mb-2 font-bold text-white">Pastelaria</h1>
+
+            <span class="text-white font-medium">Rua da Alegria, 101 - Centro, RJ</span>
+
+            <div class="bg-green-600  px-4 py-1 rounded-lg mt-5" id="date-actual">
+                <span class="text-white font-medium"> Seg a Sáb: 11h às 19h</span>
+            </div>
+
+        </div>
+
+    </header>
+
+    <h2 class="text-3xl md:text-4xl font-bold text-center mt-12 mb-24"> Conheça nosso menu</h2>
+
+    <!-- Menu -->
+    <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto max-w-7xl px-20">
+    
+            <!-- Produto 1-->
+            <div class="flex gap-3 mb-6 h-full items-center">
+                <img src="assets/pastelqueijo.png" alt="Pastel de Queijo"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-2">Pastel de Queijo</p>
+                        <p class="text-sm">Queijo mussarela</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-6">
+                        <p class="font-bold text-lg">R$13,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="Pastel de Queijo" data-price="13.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 2 -->
+            <div class="flex gap-3 mb-6 h-full items-center">
+                <img src="assets/pastelcarne.png" alt="Pastel de Carne"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-2">Pastel de Carne</p>
+                        <p class="text-sm">Carne moída</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-6">
+                        <p class="font-bold text-lg">R$12,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="Pastel de Carne" data-price="12.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 3 -->
+            <div class="flex gap-3 mb-6 h-full items-center">
+                <img src="assets/pastelfrango.png" alt="Pastel de Frango"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-2">Pastel de Frango</p>
+                        <p class="text-sm">Frango desfiado</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-6">
+                        <p class="font-bold text-lg">R$12,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="Pastel de Frango" data-price="12.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 4 -->
+            <div class="flex gap-3 mb-6 h-full items-center">
+                <img src="assets/pastelcamarao.png" alt="Pastel de Camarão"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-2">Pastel de Camarão</p>
+                        <p class="text-sm">Camarão com catupiry</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-6">
+                        <p class="font-bold text-lg">R$16,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="Pastel de Camarão" data-price="16.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 5 -->
+            <div class="flex gap-3 mb-6 h-full items-center">
+                <img src="assets/pastelbanana.png" alt="Pastel de Banana"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-2">Pastel de Banana</p>
+                        <p class="text-sm">Banana com canela</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-6">
+                        <p class="font-bold text-lg">R$14,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="Pastel de Banana" data-price="14.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 6 -->
+            <div class="flex gap-3 mb-6 h-full items-center">
+                <img src="assets/pastelchocolate.png" alt="Pastel de Chocolate"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-2">Pastel de Chocolate</p>
+                        <p class="text-sm">Chocolate ou brigadeiro</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-6">
+                        <p class="font-bold text-lg">R$14,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="Pastel de Chocolate" data-price="14.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+        </main>
+    
+    
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl text-center mt-12 mb-16">Bebidas</h2>
+        </div>
+
+        <!-- Bebidas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mx-auto max-w-7xl px-20" id="menu">
+
+            <!-- Bebida 1 -->
+            <div class="flex gap-3 mb-6 h-full items-center">
+                <img src="assets/cocalata.png" alt="Coca cola"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-6">Coca cola lata</p>
+                        <p class="text-sm">310 ml</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-9">
+                        <p class="font-bold text-lg">R$5,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="Coca cola" data-price="5.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bebida 2 -->
+            <div class="flex gap-3 mb-6 h-full items-center">
+                <img src="assets/pepsilata.png" alt="Pepsi"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-6">Pepsi lata</p>
+                        <p class="text-sm">350 ml</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-9">
+                        <p class="font-bold text-lg">R$4,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="Pepsi" data-price="4.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Bebida 3-->
+            <div class="flex gap-3 mb-6 h-full items-center">
+                <img src="assets/guaranalata.png" alt="Guaraná"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-6">Guaraná lata</p>
+                        <p class="text-sm">350 ml</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-9">
+                        <p class="font-bold text-lg">R$4,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="Guaraná" data-price="4.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Bebida 4 -->
+            <div class="flex gap-3 mb-6 h-full items-center pb-9">
+                <img src="assets/fantalata.png" alt="Fanta"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-6">Fanta lata</p>
+                        <p class="text-sm">350 ml</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-9">
+                        <p class="font-bold text-lg">R$4,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="Fanta" data-price="4.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Bebida 5 -->
+            <div class="flex gap-3 mb-6 h-full items-center pb-9">
+                <img src="assets/sprite.png" alt="Sprite"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-6">Sprite lata</p>
+                        <p class="text-sm">350 ml</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-9">
+                        <p class="font-bold text-lg">R$3,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="Sprite" data-price="3.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Bebida 6 -->
+            <div class="flex gap-3 mb-6 h-full items-center pb-9">
+                <img src="assets/agua.png" alt="Água"
+                    class="w-32 h-32 rounded-lg hover:scale-110 duration-300">
+    
+                <div class="flex flex-col justify-between h-full">
+                    <div>
+                        <p class="font-bold mt-6">Água sem gás</p>
+                        <p class="text-sm">500 ml</p>
+                    </div>
+                    <div class="flex items-center gap-2 justify-between mb-9">
+                        <p class="font-bold text-lg">R$2,90</p>
+                        <button class="bg-gray-800 px-4 rounded add-to-cart-button" data-name="agua" data-price="2.90">
+                            <i class="bi bi-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <!-- Fim do Menu -->
+
+    <!-- Modal -->
+    <div class="bg-black/70 w-full h-full fixed top-0 left-0 z-[4] items-center justify-center hidden" id="modal">
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[40%]">
+            <h2 class="text-center font-semibold text-2xl mb-2">Meu carrinho</h2>
+
+            <div class="flex justify-between mb-2 flex-col" id="cart-items" >
+
+                <p class="font-bold">Total: <span id="cart-total">0,00</span></p>
+
+                <p class="font-bold mt-4">Endereço de entrega: </p>
+
+                <input type="text" placeholder="Digite seu endereço..." class="w-full border-2 p-1 rounded my-1" id="address" >
+
+                <!-- se o campo de endereço for nulo -->
+                <p class="text-red-500 hidden" id="address-empty">Digite seu endereço...</p>
+
+                <div class="flex items-center justify-between mt-4 w-full">
+                    <button class="font-semibold" id="close-modal">Fechar</button>
+                    <button class="bg-green-500 text-white px-4 py-1 rounded" id="checkout-modal" >Finalizar pedido</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Fim do Modal -->
+
+
+    <footer class="w-full bg-yellow-500 py-3 fixed bottom-0 z-2 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-semibold" id="cart-button">
+            (<span id="cart-count">0</span>)
+            Confira o carrinho
+            <i class="bi bi-cart-plus text-lg text-white"></i>
+        </button>
+
+    </footer>
+
+</body>
+
+</html>
